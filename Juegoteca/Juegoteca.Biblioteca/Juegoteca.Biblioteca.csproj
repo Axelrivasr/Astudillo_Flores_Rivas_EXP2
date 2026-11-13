@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Gestores\" />
-    <Folder Include="Servicios\" />
   </ItemGroup>
 
 </Project>
