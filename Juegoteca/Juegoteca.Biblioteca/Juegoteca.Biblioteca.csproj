@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Modelos\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Gestores\" />
-    <Folder Include="Servicios\" />
   </ItemGroup>
 
 </Project>
