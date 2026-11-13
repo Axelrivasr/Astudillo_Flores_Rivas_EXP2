@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Juegoteca.Biblioteca.Modelos
 {
@@ -51,16 +52,20 @@ namespace Juegoteca.Biblioteca.Modelos
             return total;
         }
 
-        public void MostrarColecciones()
+        public string MostrarColecciones()
         {
+            if (Colecciones.Count == 0) return "No hay colecciones.";
+
+            var sb = new StringBuilder();
             foreach (var kvp in Colecciones)
             {
-                Console.WriteLine($"Colección: {kvp.Key}");
+                sb.AppendLine($"Colección: {kvp.Key}");
                 foreach (var juego in kvp.Value)
                 {
-                    Console.WriteLine($"  {juego.ToString()}");
+                    sb.AppendLine($"  {juego.ToString()}");
                 }
             }
+            return sb.ToString().TrimEnd();
         }
     }
 }
